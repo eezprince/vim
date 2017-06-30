@@ -25,9 +25,9 @@ let g:pydiction_menu_height = 3
 
 " nerdtree
 autocmd vimenter * NERDTree
-"autocmd vimenter * wincmd p
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"let NERDTreeIgnore=['\.pyc$', '\~$']
+autocmd vimenter * wincmd p
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 " fold
 set foldmethod=indent
