@@ -10,12 +10,12 @@ let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
 execute pathogen#infect()
 filetype plugin indent on
-syntax on
 filetype plugin on
+syntax on
 
 "overlength
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
-match OverLength /\%81v.\+/
+match OverLength /\%75v.\+/
 
 set ofu=syntaxcomplete#Complete
 
@@ -29,9 +29,9 @@ autocmd vimenter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
-" fold
-set foldmethod=indent
-
 " flagging Unnecessary Whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+set foldmethod=indent
+set nofoldenable
