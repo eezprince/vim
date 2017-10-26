@@ -21,7 +21,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " color
-colorscheme monokai
+let g:molokai_original = 1
 
 :map <F2> :w\|!python %<CR>
 set number
@@ -33,10 +33,9 @@ set autoindent
 
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
-call pathogen#infect()
 syntax on
-syntax enable
 filetype plugin on
+syntax enable
 
 "overlength
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929 
